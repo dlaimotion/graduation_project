@@ -1,0 +1,49 @@
+/*!
+ * Start Bootstrap - Shop Homepage (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+
+
+body {
+    /*background-color: #424242;*/
+    background-color: #e9e8db;
+    font-family: "Droid Arabic Kufi100", "Arial";
+}
+
+footer {
+    margin: 50px 0;
+}
+
+
+/*  OUR CUSTOM STYLING  */
+
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+.my-login-form {
+    background-color: #444444;
+    padding: 30px 50px;
+}
+.my-login-form h2, .my-login-form h5 {
+    color: white;
+}
+.my-login-form input, .my-login-form select {
+    text-align: right;
+    border: #c3c3c3 solid thin;
+    border-radius: 0;
+    height: 40px;
+    padding-top: 12px;
+}
+.my-login-form button {
+    border-radius: 0;
+    height: 40px;
+}

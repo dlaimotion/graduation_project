@@ -1,0 +1,102 @@
+/*!
+ * Start Bootstrap - Shop Homepage (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    /*background-color: #424242;*/
+    background-color: #e9e8db;
+    font-family: "Droid Arabic Kufi100", "Arial";
+}
+
+.slide-image {
+    width: 100%;
+}
+
+.carousel-holder {
+    margin-bottom: 30px;
+}
+
+.carousel-control,
+.item {
+    border-radius: 4px;
+}
+
+.caption {
+    height: 130px;
+    overflow: hidden;
+}
+
+.caption h4 {
+    white-space: nowrap;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.ratings {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #d17581;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+
+/*  OUR CUSTOM STYLING  */
+
+.my-navbar {
+    position: fixed;
+    height: 100px;
+    /*background-color: #ffab00;*/
+    background-color: #444444;
+}
+.my-navbar-collapse {
+    background-color: #444444;
+}
+.my-navbar a {
+    font-size: 20px;
+    margin-top: 24px;
+    color: white;
+}
+.my-down-navbar {
+    margin-top: 70px;
+}
+.my-carousel-slide {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    /*background-color: #ffab00;*/
+    background-color: #444444;
+}
+.my-block {
+    background-color: white;
+    /*border: 4px #ffab00 solid;*/
+    border-radius: 10px;
+}
+.my-block img {
+    border-radius: 10px;
+}
+.card-block {
+    padding: 10px;
+}
+.my-carousel-indicators {
+    margin-bottom: -12px;
+}
+.my-thumbnail {
+    border: 4px white solid;
+}

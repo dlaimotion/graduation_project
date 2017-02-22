@@ -1,0 +1,208 @@
+/*!
+ * Start Bootstrap - Shop Homepage (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Roboto Light'), local('Roboto-Light'), url(../fonts/Roboto) format('woff');
+}
+.roboto-font {
+    font-family: Roboto;
+}
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    /*background-color: #424242;*/
+    background-color: #e9e8db;
+    font-family: "Droid Arabic Kufi100", "Arial";
+}
+.margin-top-30 {
+    margin-top: 30px;
+}
+
+.slide-image {
+    width: 100%;
+}
+
+.carousel-holder {
+    margin-bottom: 30px;
+}
+
+.carousel-control,
+.item {
+    border-radius: 4px;
+}
+
+.caption {
+    height: 130px;
+    overflow: hidden;
+}
+
+.caption h4 {
+    white-space: nowrap;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.ratings {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #d17581;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+
+/*  OUR CUSTOM STYLING  */
+
+.my-navbar {
+    position: fixed;
+    height: 100px;
+    /*background-color: #ffab00;*/
+    background-color: #444444;
+}
+.my-navbar-collapse {
+    background-color: #444444;
+}
+.my-navbar a {
+    font-size: 20px;
+    margin-top: 24px;
+    color: white;
+}
+.my-down-navbar {
+    margin-top: 70px;
+}
+.my-carousel-slide {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    /*background-color: #ffab00;*/
+    background-color: #444444;
+}
+.my-block {
+    background-color: white;
+    /*border: 4px #ffab00 solid;*/
+    border-radius: 10px;
+}
+.my-block img {
+    border-radius: 10px;
+}
+.card-block {
+    padding: 10px;
+}
+.my-carousel-indicators {
+    margin-bottom: -12px;
+}
+/* This is to make the carousel has a fixed heigth */
+.my-product-images-carousel .item img {
+    width: 100%;
+    height: 450px;
+}
+.my-thumbnail {
+    border: 4px white solid;
+}
+.my-auction-card {
+    background-color: #444444;
+    color: white;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 4px;
+}
+.my-auction-card-time {
+    height:300px;
+    padding-top: 80px;
+}
+.my-fixed-text {
+    margin-top: 40px;
+    font-family: Roboto;
+    font-size: 60px;
+}
+.my-auction-card-auctioning {
+    height:150px;
+    background-color: #343434;
+    padding-top: 27px;
+}
+.my-auction-card-auctioning h4 {
+    margin-bottom: 20px;
+}
+/* Not used yet */
+.my-timer {
+    height: 150px;
+}
+.my-auction-card-auctioning input {
+    text-align: right;
+    border: #c3c3c3 solid thin;
+    border-radius: 0;
+    height: 40px;
+    padding-top: 12px;
+}
+.my-auction-card-auctioning button {
+    border-radius: 0;
+    height: 40px;
+}
+.my-description {
+    padding: 30px;
+    background-color: white;
+    color: #606060;
+}
+.my-description p {
+    font-size: 18px;
+}
+.my-section-title {
+    margin-bottom: 20px;
+}
+.my-seller-rating {
+    padding: 30px;
+    background-color: white;
+    height: 375px;
+    color: #606060;
+}
+.my-user-icon {
+    width: 250px;
+}
+.my-user-icon-comment {
+    width: 70px;
+}
+.my-comments-section {
+    padding: 30px;
+    padding-bottom: 20px;
+    background-color: white;
+    color: #606060;
+}
+.my-user-comment-section {
+    border: 1px #dfdfdf solid;
+    padding:20px;
+}
+.my-user-comment-section .media-heading {
+    margin-bottom: 14px;
+}
+.my-user-comment-section p {
+    margin-bottom: 2px;
+}
+.my-seller-comment-section {
+    border: 5px #ffab00 solid;
+    padding:20px;
+    background-color: #444444;
+    color: white;
+}
+.my-seller-comment-section .media-heading {
+    margin-bottom: 14px;
+}
+.my-seller-comment-section p {
+    margin-bottom: 2px;
+}
