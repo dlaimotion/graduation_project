@@ -64,27 +64,11 @@ body {
     color: #333;
 }
 
-footer {
-    margin: 50px 0;
-}
 
 
 /*  OUR CUSTOM STYLING  */
 
-.my-navbar {
-    position: fixed;
-    height: 100px;
-    /*background-color: #ffab00;*/
-    background-color: #444444;
-}
-.my-navbar-collapse {
-    background-color: #444444;
-}
-.my-navbar a {
-    font-size: 20px;
-    margin-top: 24px;
-    color: white;
-}
+
 .my-down-navbar {
     margin-top: 70px;
 }
@@ -123,23 +107,56 @@ footer {
     padding-left: 30px;
     padding-top: 4px;
 }
+.my-auction-card-top {
+    height:72px;
+    background-color: #444444;
+    padding-top: 2px;
+    margin-bottom: 10px;
+}
 .my-auction-card-time {
-    height:300px;
-    padding-top: 80px;
+    height:250px;
+    padding-top: 10px;
+    margin-bottom: 10px;
 }
 .my-timer-text {
-    margin-bottom: 60px;
+    margin-top: 20px;
     font-family: Roboto;
-    font-size: 60px;
+    font-size: 50px;
 }
 .my-auction-card-auctioning {
-    height:150px;
-    background-color: #343434;
-    padding-top: 25px;
+    height:250px;
+    background-color: #444444;
+    padding-top: 10px;
 }
 .my-auction-card-auctioning h4 {
     margin-bottom: 20px;
 }
+.my-fixed-card {
+    background-color: #444444;
+    color: white;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 4px;
+}
+.my-fixed-card-price {
+    height:300px;
+    padding-top: 80px;
+}
+.my-fixed-text {
+    margin-top: 40px;
+    margin-bottom: 70px;
+    font-family: Roboto;
+    font-size: 60px;
+}
+.my-fixed-card-buy {
+    height:150px;
+    background-color: #343434;
+    padding-top: 27px;
+}
+.my-fixed-card-buy h4 {
+    margin-bottom: 20px;
+}
+
 /* Not used yet */
 .my-timer {
     height: 150px;
@@ -151,9 +168,43 @@ footer {
     height: 40px;
     padding-top: 12px;
 }
-.my-auction-card-auctioning button {
+.auction-submit-btn {
+    margin-top:55px;
     border-radius: 0;
     height: 40px;
+    width: 100%;
+}
+.auction-up {
+    background-color: Transparent;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    margin-top: -2px;
+    margin-bottom: 10px;
+    width: 50px;
+    font-size: 20px;
+}
+.auction-down {
+    background-color: Transparent;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    margin-top: 12px;
+    width: 50px;
+    font-size: 20px;
+}
+.my-auction-card-direct-purchase {
+    height:106px;
+    background-color: #444444;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+.auction-direct-purchase-btn {
+    border-radius: 0;
+    height: 40px;
+    width: 100%;
 }
 .my-description {
     padding: 30px;
@@ -205,4 +256,11 @@ footer {
 }
 .my-seller-comment-section p {
     margin-bottom: 2px;
+}
+.write-comment-section {
+    padding: 30px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    background-color: white;
+    color: #606060;
 }

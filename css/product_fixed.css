@@ -116,14 +116,14 @@ footer {
 .my-thumbnail {
     border: 4px white solid;
 }
-.my-auction-card {
+.my-fixed-card {
     background-color: #444444;
     color: white;
     padding-right: 30px;
     padding-left: 30px;
     padding-top: 4px;
 }
-.my-auction-card-time {
+.my-fixed-card-price {
     height:300px;
     padding-top: 80px;
 }
@@ -132,12 +132,12 @@ footer {
     font-family: Roboto;
     font-size: 60px;
 }
-.my-auction-card-auctioning {
+.my-fixed-card-buy {
     height:150px;
     background-color: #343434;
     padding-top: 27px;
 }
-.my-auction-card-auctioning h4 {
+.my-fixed-card-buy h4 {
     margin-bottom: 20px;
 }
 /* Not used yet */

@@ -53,29 +53,16 @@ body {
     color: #333;
 }
 
-footer {
-    margin: 50px 0;
-}
+
 
 
 /*  OUR CUSTOM STYLING  */
 
-.my-navbar {
-    position: fixed;
-    height: 100px;
-    /*background-color: #ffab00;*/
-    background-color: #444444;
-}
-.my-navbar-collapse {
-    background-color: #444444;
-}
-.my-navbar a {
-    font-size: 20px;
-    margin-top: 24px;
-    color: white;
-}
 .my-down-navbar {
     margin-top: 70px;
+}
+.my-search {
+    margin-bottom: 40px;
 }
 .my-carousel-slide {
     padding-top: 20px;

@@ -1,3 +1,12 @@
+<?php
+$logged = true;
+$withDirectBuy = true;
+$loggedUserBoughtProduct = false;
+$endAuction = false;
+$endFixed = false;
+$productType = "auctioned";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,43 +37,10 @@
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top my-navbar" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header pull-right">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" style="color:white; font-size: 30px;" href="#">كــــشك</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse my-navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a style="color:white;" href="#">تسجيل الدخول</a>
-                    </li>
-                    <li>
-                        <a style="color:white;" href="#">تسجيل جديد</a>
-                    </li>
-                    <li>
-                        <a style="color:white;" href="#">مساعدة</a>
-                    </li>
-                    <li>
-                        <a style="color:white;" href="#"><span class="glyphicon glyphicon-heart"></span></a>
-                    </li>
-                    <li>
-                        <a style="color:white;" href="#"><span class="glyphicon glyphicon-bell"></span></a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+    <?php
+    include "navbar.php";
+    ?>
+
 
 <br><br><br><br>
 
@@ -124,15 +100,12 @@
             <!-- / Product's images -->
 
             <!-- Her, we have to say, if the device is moble, then put some <br> tags to make some nice space between aproduct's images and auction card -->
+            <!--
             <div class="col-xs-12 col-md-5">
                 <div class="my-auction-card my-auction-card-time">
                     <h2 class="text-center my-timer-text">00 : 27 : 45</h2>
 
-                    <!--
-                    <div class="my-timer">
 
-                    </div>
-                    -->
 
                     <h4 class="text-right">35 S.R : السعر الابتدائي </h4>
                     <h4 class="text-right">67 S.R : آخر مزايدة </h4>
@@ -154,6 +127,140 @@
                         </form>
                     </div>
                 </div>
+
+            </div> -->
+
+
+            <div class="col-xs-12 col-md-5">
+                <?php
+                if ($productType == "auctioned") {
+                    ?>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="my-auction-card my-auction-card-top">
+                            <h4 class="text-center">السعر الابتدائي</h4>
+                            <h4 class="text-center">35 ريال</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-6">
+                        <div class="my-auction-card my-auction-card-top">
+                            <h4 class="text-center">قيمة آخر مزايدة</h4>
+                            <h4 class="text-center">45 ريال</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-6">
+                        <div class="my-auction-card my-auction-card-time">
+                            <h4 class="text-center">الوقت المتبقي</h4>
+                            <h2 class="text-center my-timer-text">00 : 27 : 45</h2>
+                            <!--
+                            <div class="my-timer">
+
+                            </div>
+                            -->
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-6">
+                        <div class="my-auction-card my-auction-card-auctioning">
+                            <?php
+                            if (!$endAuction) {
+                                if ($logged) {
+                                    ?>
+                                    <h4 class="text-center">قم بالمزايدة الآن !</h4>
+                                    <form class="form-inline">
+                                        <div class="col-xs-12">
+                                            <button class="center-block auction-up"><span
+                                                    class="glyphicon glyphicon-chevron-up"></span></button>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-addon">ريال</div>
+                                                <input type="text" class="form-control text-right" placeholder="قيمة المزايدة">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12">
+                                            <button class="center-block auction-down"><span
+                                                    class="glyphicon glyphicon glyphicon-chevron-down"></span></button>
+                                        </div>
+                                        <button type="submit" class="btn btn-success auction-submit-btn center-block">مزايدة</button>
+                                    </form>
+                                    <?php
+                                } else {
+                                    ?>
+                                    <h4 class="text-right">رجاء، قم بتسجيل الدخول لتتمكن من المزايدة على هذه السلعة</h4>
+                                    <?php
+                                }
+                            } else {
+                                ?>
+                                <h4 class="text-right">انتهت المزايدة على هذه السلعة</h4>
+                                <?php
+                            }
+                            ?>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-12">
+                        <div class="my-auction-card my-auction-card-direct-purchase">
+                            <?php
+                            if (!$endAuction) {
+                                if ($withDirectBuy) {
+                                    ?>
+                                    <h4 class="text-center">شراء فوري بقيمة 50 ريال</h4>
+                                    <?php
+                                    if ($logged) {
+                                        ?>
+                                        <button class="btn btn-success auction-direct-purchase-btn center-block">شراء فوري</button>
+                                        <?php
+                                    } else {
+                                        ?>
+                                        <h4 class="text-center">رجاء، قم بتسجيل الدخول لتتمكن من الشراء الفوري</h4>
+                                        <?php
+                                    }
+                                } else {
+                                    ?>
+                                    <h4 class="text-center">لا يتوفر شراء فوري لهذه السلعة</h4>
+                                    <?php
+                                }
+                            } else {
+                                ?>
+                                <h4 class="text-right">انتهت المزايدة على هذه السلعة</h4>
+                                <?php
+                            }
+                            ?>
+                        </div>
+                    </div>
+                    <?php
+                } elseif ($productType == "fixed") {
+                    ?>
+                    <div class="my-fixed-card my-fixed-card-price">
+                        <h2 class="text-center my-fixed-text">35 S.R</h2>
+                        <h4 class="text-right">5 : الكمية المتبقية</h4>
+                    </div>
+
+                    <div class="my-fixed-card my-fixed-card-buy">
+                        <?php
+                        if (!$endFixed) {
+                            ?>
+                            <h4 class="text-center">قم بشرائه الآن !</h4>
+                            <div class="col-xs-12 text-center">
+                                <form class="form-inline">
+                                    <div class="col-xs-12">
+                                        <button type="submit" class="btn btn-success btn-block">شـراء</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <?php
+                        } else {
+                            ?>
+                            <h4 class="text-center" style="margin-top: 40px;">هذا المنتج غير متاح حالياً</h4>
+                            </div>
+                            <?php
+                        }
+                }
+                ?>
+
+
 
             </div>
 
@@ -295,7 +402,7 @@
 
         <!-- Rating -->
         <div class="row margin-top-30">
-            <div class="col-xs-12"><h3 class="text-right my-section-title">تقييم البائع</h3></div>
+            <div class="col-xs-12"><h3 class="text-right my-section-title">معلومات البائع</h3></div>
             <div class="col-xs-12 col-md-5">
                 <div class="my-seller-rating">
                     <div class="col-xs-12">
@@ -319,17 +426,28 @@
                 <div class="my-seller-rating">
                     <div class="col-xs-12">
                         <br>
-                        <h2 class="text-center" style="font-size: 22px;">قيم البائع</h2>
-                        <br><br><br>
-                        <p class="text-center" style="font-size: 30px;">
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                        </p>
-                        <br><br><br>
-                        <button type="submit" class="btn btn-success center-block">تقييم</button>
+                        <?php
+                        if ($loggedUserBoughtProduct) {
+                            ?>
+                            <h2 class="text-center" style="font-size: 22px;">قيم البائع</h2>
+                            <br><br><br>
+                            <p class="text-center" style="font-size: 30px;">
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                            </p>
+                            <br><br><br>
+                            <button type="submit" class="btn btn-success center-block">تقييم</button>
+                            <?php
+                        } else {
+                            ?>
+                            <h2 class="text-center" style="font-size: 22px;">صفحة تقييم البائع</h2>
+                            <h2 class="text-center" style="font-size: 18px; margin-top: 80px;">ستظهر لك خيارات تقييم البائع إذا كنت أنت المشتري لهذه السلعة</h2>
+                            <?php
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -360,6 +478,19 @@
             <div class="col-xs-12"><h3 class="text-right my-section-title">تعليقات المستخدمين</h3></div>
             <div class="col-xs-12 my-comments-section">
                 <ul class="media-list">
+                    <li class="media my-seller-comment-section">
+                        <div class="media-body text-right">
+                            <h4 class="media-heading">معاذ جابر</h4>
+                            <p>لمن سأل، نعم هناك إمكانية لتوصيل المنتج لأي مدينة في المملكة.</p>
+                            <p>نشكر لك ثقتك بنا</p>
+                        </div>
+                        <div class="media-right">
+                            <a href="#">
+                                <img class="media-object my-user-icon-comment img-thumbnail img-circle" src="images/user-icon.png">
+                            </a>
+                        </div>
+                    </li>
+
                     <li class="media my-user-comment-section">
                         <div class="media-body text-right">
                             <h4 class="media-heading">محمد إبراهيم</h4>
@@ -385,22 +516,29 @@
                             </a>
                         </div>
                     </li>
-
-                    <li class="media my-seller-comment-section">
-                        <div class="media-body text-right">
-                            <h4 class="media-heading">معاذ جابر</h4>
-                            <p>لمن سأل، نعم هناك إمكانية لتوصيل المنتج لأي مدينة في المملكة.</p>
-                            <p>نشكر لك ثقتك بنا</p>
-                        </div>
-                        <div class="media-right">
-                            <a href="#">
-                                <img class="media-object my-user-icon-comment img-thumbnail img-circle" src="images/user-icon.png">
-                            </a>
-                        </div>
-                    </li>
-
                 </ul>
             </div>
+
+            <?php
+            if ($logged) {
+                ?>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="write-comment-section text-right">
+                            <form>
+                                <div class="form-group">
+                                    <label for="writeComment">اكتب تعليقا</label>
+                                    <textarea class="form-control text-right" id="writeComment" rows="5"
+                                              dir="rtl"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-success">إرسال</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <?php
+            }
+            ?>
 
         </div>
 
@@ -434,18 +572,11 @@
 
 
 
-    <div class="container">
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-xs-12">
-                    <p class="text-right">  2017 &copy; جميع الحقوق محفوظة</p>
-                </div>
-            </div>
-        </footer>
 
-    </div>
-    <!-- /.container -->
+
+    <?php
+    include "footer.html";
+    ?>
 
     <!-- jQuery -->
     <script src="js/jquery.min.js"></script>
