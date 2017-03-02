@@ -4,7 +4,7 @@ $withDirectBuy = true;
 $loggedUserBoughtProduct = false;
 $endAuction = false;
 $endFixed = false;
-$productType = "auctioned";
+$productType = "fixed";
 ?>
 
 <!DOCTYPE html>
@@ -541,34 +541,7 @@ $productType = "auctioned";
             ?>
 
         </div>
-
-
-
-
-
-
-
-
-
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -577,6 +550,7 @@ $productType = "auctioned";
     <?php
     include "footer.html";
     ?>
+
 
     <!-- jQuery -->
     <script src="js/jquery.min.js"></script>

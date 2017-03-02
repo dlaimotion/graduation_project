@@ -61,7 +61,7 @@
                         <a style="color:white;" href="#"><span class="glyphicon glyphicon-heart"></span></a>
                     </li>
                     <li>
-                        <a style="color:white;" href="#"><span class="glyphicon glyphicon-bell"></span></a>
+                        <a data-toggle="modal" data-target="#notificationModal" style="color:white;" href="#"><span class="glyphicon glyphicon-bell"></span> <span class="badge badge-default">2</span></a>
                     </li>
                     <?php
                 }
@@ -72,3 +72,42 @@
     </div>
     <!-- /.container -->
 </nav>
+
+
+
+
+
+<!-- Notification Modal -->
+<div class="modal fade" id="notificationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title text-right">التنبيهــات</h3>
+                <button type="button" class="close pull-left" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-2">
+                        <p class="">3:45 PM</p>
+                    </div>
+                    <div class="col-xs-10">
+                        <p class="text-right">تم إلغاء مزايدتك على آيفون فايف ٣٢ قيقا<span class="glyphicon glyphicon-bell"></span></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-2">
+                        <p class="">3:42 PM</p>
+                    </div>
+                    <div class="col-xs-10">
+                        <p class="text-right">قمت بالمزايدة على آيفون فايف ٣٢ قيقا بقيمة ٢٢٠٠ ريال<span class="glyphicon glyphicon-bell"></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">إغلاق</button>
+            </div>
+        </div>
+    </div>
+</div>
